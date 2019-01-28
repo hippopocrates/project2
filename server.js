@@ -3,6 +3,8 @@ const app = express()
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 
+const PORT = process.env.PORT || 3000
+
 const Book = require('./models/library.js')
 
 app.use(express.urlencoded({extended:false}))
@@ -13,7 +15,7 @@ const bookController = require('./controllers/library.js')
 app.use('/library', bookController)
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('listening...')
 })
 

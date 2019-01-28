@@ -39,7 +39,9 @@ router.get('/seed', (req, res) => {
       totalPages: 464,
       completed: true
     },
-  ])
+  ], (err, data) => {
+    console.log(data);
+  })
 })
 
 router.get('/', (req, res) => {
@@ -83,6 +85,11 @@ router.post('/', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
+  if(req.body.completed === 'on'){
+    req.body.completed = true
+  } else {
+    req.body.completed = false
+  }
   Book.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel) => {
     res.redirect('/library')
   })

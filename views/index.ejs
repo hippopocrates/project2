@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <h1>Library Index Page</h1>
+    <h1>bookbug.</h1>
     <nav>
       <a href="/library/new">add book</a>
     </nav>
@@ -13,7 +13,7 @@
       <% for (let i = 0; i < books.length; i++){ %>
         <li>
           <a href="/library/<%=books[i].id%>">
-            <%= books[i].name %>
+            <%= books[i].title %>
           </a>
         </li>
       <% } %>

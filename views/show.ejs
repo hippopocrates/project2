@@ -5,6 +5,16 @@
     <title></title>
   </head>
   <body>
-    <h1>Library Show Page</h1>
+    <%=book.title%> <br>
+    <%=book.author%> <br>
+    <%=book.currentPage%>/<%=book.totalPages%> <br>
+    <% if (book.completed) { %>
+      <img src="/img/bookTrophy.jpg">
+    <% } %>
+    <a href="/library"><button type="button" name="button"><-back</button></a>
+    <a href="/library/<%=book.id%>/edit"><button type="button" name="button">edit</button></a>
+    <form action="/library/<%=book.id%>?_method=DELETE" method="post">
+      <input type="submit" name="" value="delete">
+    </form>
   </body>
 </html>

@@ -5,6 +5,14 @@
     <title></title>
   </head>
   <body>
-    <h1>Library New</h1>
+    <h1>add book</h1>
+    <form action="/library" method="post">
+      <input type="text" name="title" placeholder="title"> <br>
+      <input type="text" name="author" placeholder="author"> <br>
+      <input type="number" name="currentPage" placeholder="current Page"> <br>
+      <input type="number" name="totalPages" placeholder="total pages"> <br>
+      <input type="checkbox" name="completed"> finished? <br>
+      <input type="submit" value="add book">
+    </form>
   </body>
 </html>

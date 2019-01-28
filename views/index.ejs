@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Library Index Page</h1>
+    <nav>
+      <a href="/library/new">add book</a>
+    </nav>
+    <ul>
+      <% for (let i = 0; i < books.length; i++){ %>
+        <li>
+          <a href="/library/<%=books[i].id%>">
+            <%= books[i].name %>
+          </a>
+        </li>
+      <% } %>
+    </ul>
+  </body>
+</html>

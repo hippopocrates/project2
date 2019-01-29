@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Sacramento" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
     <h1>bookbug.</h1>
     <nav>
-      <a href="/library/new">add book</a>
+      <a href="/library/new"><button type="button" name="button">add book</button></a>
     </nav>
-    <ul>
+    <div class="cards">
       <% for (let i = 0; i < books.length; i++){ %>
-        <li>
           <a href="/library/<%=books[i].id%>">
-            <%= books[i].title %>
             <img src="<%= books[i].imgSrc %>" alt="<%= books[i].title %>">
           </a>
-        </li>
       <% } %>
-    </ul>
+    </div>
   </body>
 </html>

@@ -1,0 +1,28 @@
+* {
+  font-family: 'Arvo', serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.cards {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 100px;
+  height: 160px;
+  margin: 5px;
+}
+
+nav {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}

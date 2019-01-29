@@ -9,8 +9,8 @@
     <form action="/library/<%=book.id%>?_method=PUT" method="post">
       <input type="text" name="title" value="<%=book.title%>"> <br>
       <input type="text" name="author" value="<%=book.author%>"> <br>
-      <input type="number" name="current page" value="<%=book.currentPage%>"> <br>
-      <input type="number" name="total pages" value="<%=book.totalPages%>"> <br>
+      <input type="number" name="currentPage" value="<%=book.currentPage%>"> <br>
+      <input type="number" name="totalPages" value="<%=book.totalPages%>"> <br>
       <input type="checkbox" name="completed"
       <% if(book.completed){ %>
         checked

@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Sacramento" rel="stylesheet">
+    <link rel="stylesheet" href="/css/show.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <%=book.title%> <br>
-    <%=book.author%> <br>
-    <%=book.currentPage%>/<%=book.totalPages%> <br>
-    <% if (book.completed) { %>
-      <img src="/img/bookTrophy.jpg">
-    <% } %>
-    <a href="/library"><button type="button" name="button"><-back</button></a>
-    <a href="/library/<%=book.id%>/edit"><button type="button" name="button">edit</button></a>
-    <form action="/library/<%=book.id%>?_method=DELETE" method="post">
-      <input type="submit" name="" value="delete">
-    </form>
+    <div id="main">
+      <div id="first"></div>
+      <div id="second">
+        <header>
+          <h1><%=book.title%></h1>
+          <h2><%=book.author%></h2>
+        </header>
+        <div id="imgHolder">
+          <h4>times read</h4>
+          <% if (book.completed) { %>
+            <img src="/img/rose.png">
+          <% } else { %>
+            <p>none</p>
+          <% } %>
+        </div>
+        <h3>
+          pages read <br>
+          <%=book.currentPage%>/<%=book.totalPages%>
+        </h3>
+        <a href="/library"><button type="button" name="button"><-back</button></a>
+        <a href="/library/<%=book.id%>/edit"><button type="button" name="button">edit</button></a>
+        <form action="/library/<%=book.id%>?_method=DELETE" method="post">
+          <input type="submit" name="" value="delete">
+        </form>
+      </div>
+    </div>
   </body>
 </html>
+
+<style>
+
+  html {
+    background:url('<%=book.imgSrc%>');
+    background-size: 22px;
+  }
+
+  body {
+    background:url('<%=book.imgSrc%>');
+    background-size: 44px;
+  }
+
+  #first{
+    background:url('<%=book.imgSrc%>');
+    background-size: 99px;
+    opacity: 0.5;
+    width: 100%;
+    height: 900px;
+  }
+
+</style>

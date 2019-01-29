@@ -3,6 +3,7 @@ const router = express.Router()
 const Book = require('../models/library.js')
 
 router.get('/seed', (req, res) => {
+  console.log('seed route start');
   Book.create([
     {
       title: "Poirot Investigates",
@@ -17,31 +18,35 @@ router.get('/seed', (req, res) => {
       author: "Susanna Clarke",
       currentPage: 0,
       totalPages: 782,
-      completed: false
+      completed: false,
+      imgSrc: "/img/mrNorrell.jpeg"
     },
     {
       title: "The Lady of the Rivers",
       author: "Philippa Gregory",
       currentPage: 8,
       totalPages: 435,
-      completed: false
+      completed: false,
+      imgSrc: "/img/lady.jpg"
     },
     {
-      title: "The Once and Future King",
+      title: "The Book of Merlin",
       author: "T.H. White",
       currentPage: 0,
       totalPages: 656,
-      completed: true
+      completed: true,
+      imgSrc: "/img/merlin.jpeg"
     },
     {
       title: "Neverwhere",
       author: "Neil Gaiman",
       currentPage: 0,
       totalPages: 464,
-      completed: true
+      completed: true,
+      imgSrc: "/img/neverwhere.jpeg"
     },
   ], (err, data) => {
-    console.log(data);
+    res.redirect('/library/')
   })
 })
 
@@ -92,7 +97,7 @@ router.put('/:id', (req, res) => {
     req.body.completed = false
   }
   Book.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel) => {
-    res.redirect('/library')
+    res.redirect('/library/'+req.params.id)
   })
 })
 

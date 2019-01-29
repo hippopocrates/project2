@@ -8,16 +8,11 @@
   </head>
   <body>
     <h1>bookbug.</h1>
-    <img src="/img/rose.png" alt="">
     <nav>
       <a href="/library/new"><button type="button" name="button">add book</button></a>
     </nav>
     <div class="cards">
       <% for (let i = 0; i < books.length; i++){ %>
-        <div class="">
-          <p><%= books[i] %></p>
-          <p><%= books[i].imgSrc %></p>
-        </div>
           <a href="/library/<%=books[i].id%>">
             <img src="<%= books[i].imgSrc %>" alt="<%= books[i].title %>">
           </a>

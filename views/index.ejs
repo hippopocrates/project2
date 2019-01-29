@@ -14,7 +14,10 @@
     </nav>
     <div class="cards">
       <% for (let i = 0; i < books.length; i++){ %>
-        <%= books[i].imgSrc %>
+        <div class="">
+          <p><%= books[i] %></p>
+          <p><%= books[i].imgSrc %></p>
+        </div>
           <a href="/library/<%=books[i].id%>">
             <img src="<%= books[i].imgSrc %>" alt="<%= books[i].title %>">
           </a>

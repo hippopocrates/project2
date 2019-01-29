@@ -5,7 +5,8 @@ const bookSchema = new mongoose.Schema({
   author: String,
   currentPage: Number,
   totalPages: Number,
-  completed: Boolean
+  completed: Boolean,
+  imgSrc: String
 })
 
 //what does this do

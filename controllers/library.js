@@ -9,7 +9,8 @@ router.get('/seed', (req, res) => {
       author: "Agatha Christie",
       currentPage: 0,
       totalPages: 192,
-      completed: false
+      completed: false,
+      imgSrc: "/img/poirot.jpeg"
     },
     {
       title: "Jonathan Strange & Mr Norrell",

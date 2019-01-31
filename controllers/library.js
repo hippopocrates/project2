@@ -3,8 +3,7 @@ const router = express.Router()
 const Book = require('../models/library.js')
 
 router.get('/seed', (req, res) => {
-  console.log('seed route start');
-  Book.create([
+    Book.create([
     {
       title: "Poirot Investigates",
       author: "Agatha Christie",

@@ -1,0 +1,14 @@
+* {
+  text-align: center;
+  font-family: 'Arvo', serif;
+}
+
+h1 {
+  font-family: 'Sacramento', sans-serif;
+  font-size: 60px;
+  margin: 0;
+}
+
+input {
+  margin: 5px;
+}

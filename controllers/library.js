@@ -53,8 +53,6 @@ router.get("/seed", (req, res) => {
 });
 
 router.get("/", (req, res) => {
-  let x = 0;
-  console.log("hello world");
   Book.find({}, (error, allBooks) => {
     res.render("index.ejs", {
       books: allBooks
